@@ -8,29 +8,41 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
     {
         public static void SelectMeals(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine(dietPlans);
-            //Console.WriteLine("4");
+            // Low Protein
             if (dietPlans.Substring(0, 1).Equals("p"))
                 LowProtein(protein, carbs, fat, calories, dietPlans, ls);
+
+            // High Protein
             else if (dietPlans.Substring(0, 1).Equals("P"))
                 HighProtein(protein, carbs, fat, calories, dietPlans, ls);
+
+            // Low Carbs
             else if (dietPlans.Substring(0, 1).Equals("c"))
                 LowCarbs(protein, carbs, fat, calories, dietPlans, ls);
+
+            // High Carbs
             else if (dietPlans.Substring(0, 1).Equals("C"))
                 HighCarbs(protein, carbs, fat, calories, dietPlans, ls);
+
+            // Low Fats
             else if (dietPlans.Substring(0, 1).Equals("f"))
                 LowFat(protein, carbs, fat, calories, dietPlans, ls);
+
+            // High Fats
             else if (dietPlans.Substring(0, 1).Equals("F"))
                 HighFat(protein, carbs, fat, calories, dietPlans, ls);
+
+            // Low Calories
             else if (dietPlans.Substring(0, 1).Equals("t"))
                 LowCalories(protein, carbs, fat, calories, dietPlans, ls);
+
+            // High Calories
             else
                 HighCalories(protein, carbs, fat, calories, dietPlans, ls);
         }
 
         private static void HighCalories(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("HighCalories");
             int max = calories[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -54,7 +66,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void LowCalories(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("LowCalories");
             int min = calories[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -78,7 +89,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void HighFat(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("HighFat");
             int max = fat[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -103,7 +113,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void LowFat(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("LowFat");
             int min = fat[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -127,7 +136,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void HighCarbs(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("HighCarbs");
             int max = carbs[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -151,7 +159,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void LowCarbs(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("LowCarbs");
             int min = carbs[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -175,7 +182,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void HighProtein(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("HighProtein");
             int max = protein[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
@@ -199,7 +205,6 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
 
         private static void LowProtein(int[] protein, int[] carbs, int[] fat, int[] calories, string dietPlans, List<int> ls)
         {
-            //Console.WriteLine("LowProtein");
             int min = protein[ls[0]];
             int i = 0;
             for (i = 1; i < ls.Count; i++)
